@@ -1,10 +1,6 @@
-@import "tailwindcss";
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-@theme {
-  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   body {
@@ -57,4 +53,8 @@
 
 .dark .glow-accent {
   box-shadow: 0 0 28px rgba(99, 102, 241, 0.28);
+}
+
+.dark .glow-accent-hover:hover {
+  box-shadow: 0 0 36px rgba(99, 102, 241, 0.48);
 }

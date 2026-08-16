@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F9FAFB] text-slate-900 transition-colors duration-500 overflow-x-hidden min-h-screen;
+  }
+  .dark body {
+    @apply bg-[#0e121a] text-slate-100;
+  }
+}
+
+/* Glass utilities */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(79, 70, 229, 0.03);
+}
+
+.dark .glass-card {
+  background-color: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
+
+.glass-pill {
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.dark .glass-pill {
+  background-color: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 24px rgba(79, 70, 229, 0.28);
+}
+
+.glow-accent-hover:hover {
+  box-shadow: 0 0 32px rgba(79, 70, 229, 0.45);
+}
+
+.dark .glow-accent {
+  box-shadow: 0 0 28px rgba(99, 102, 241, 0.28);
+}
